@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap");
+*:focus {
+  outline: none;
+}
+.header-text {
+  @apply font-extrabold text-xl text-center;
+  span {
+    @apply text-2xl;
+    font-family: "Oswald", sans-serif;
+
+    @media (max-width: 952px) {
+      @apply text-lg;
+    }
+  }
+  @media (max-width: 952px) {
+    @apply text-base;
+  }
+}
+.login-panel-form {
+  @apply flex flex-col;
+  input {
+    @apply pl-4 text-sm border text-gray-400 w-full py-4 mt-4 rounded-md;
+    @media (max-width: 952px) {
+      @apply w-80;
+    }
+  }
+  .login-panel-desc {
+    @apply text-xs mt-4 text-center text-gray-500;
+  }
+  .login-panel-button {
+    @apply mt-4  px-4 py-2 bg-black text-white rounded-md font-extrabold text-base;
+    font-family: "Oswald", sans-serif;
+  }
+}
+.register-panel-form {
+  @apply flex flex-col;
+  input {
+    @apply pl-4 text-sm border text-gray-800  w-full py-4 mt-4 rounded-md;
+    @media (max-width: 952px) {
+      @apply w-80;
+    }
+  }
+  .register-panel-desc {
+    @apply text-xs mt-4 text-center text-gray-500;
+  }
+  .register-panel-button {
+    @apply mt-4  px-4 py-2 bg-black text-white rounded-md font-extrabold text-base;
+    font-family: "Oswald", sans-serif;
+  }
+}

@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+nav {
+  height: 80px;
+  width: 100%;
+  .Logo {
+    color: black;
+    font-size: 45px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+    transition: ease 0.5s;
+  }
+  .logo-main {
+    @apply w-20 h-20 object-cover;
+
+    @media (max-width: 952px) {
+      @apply w-16 h-16 object-cover;
+    }
+    @media (max-width: 640px) {
+      @apply w-12 h-12 object-cover;
+    }
+  }
+  ul {
+    margin-right: 20px;
+    .close {
+      @apply hidden;
+    }
+    li {
+      display: inline-block;
+      padding: 0 12px;
+      border-bottom: 2px transparent solid;
+      transition: ease 0.2s;
+      cursor: pointer;
+    }
+
+    li:hover {
+      border-bottom: 2px solid black;
+      transition: ease 0.2s;
+      .yeni-cikanlar {
+        li {
+          line-height: normal;
+        }
+        li:hover {
+          border-bottom: 2px solid transparent;
+          color: black;
+        }
+        @apply md:flex  justify-center items-center md:transition-all md:duration-300 md:bg-white md:absolute md:w-full md:left-0 md:top-[113px] z-20;
+      }
+    }
+  }
+
+  .checkbtn {
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check {
+    display: none;
+  }
+  @media (max-width: 952px) {
+    .Logo {
+      font-size: 30px;
+      padding-left: 50px;
+      transition: ease 0.5s;
+    }
+    nav {
+      ul {
+        li {
+          font-size: 16px;
+          border-bottom: none;
+        }
+        li:hover {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  @media (max-width: 858px) {
+    .checkbtn {
+      display: block;
+    }
+    ul {
+      position: relative;
+      z-index: 99999;
+      position: fixed;
+      width: 80%;
+      height: 100vh;
+      top: 0px;
+      left: -100%;
+      transition: all 0.5s;
+      text-align: center;
+      background-color: white;
+      .close {
+        @apply justify-end mr-1 mt-5  flex duration-300;
+      }
+      li {
+        display: block;
+        font-size: 20px;
+        margin: 50px 0;
+        line-height: 30px;
+        border-bottom: none;
+      }
+      li:hover {
+        border-bottom: none;
+        color: gray;
+      }
+    }
+
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
+
+  .cross {
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    border-radius: 50%;
+    padding: 5px;
+    right: 5px;
+    top: 25px;
+  }
+}
+.button-right {
+  @apply hover:bg-[#f0efef] rounded-full p-2 cursor-pointer;
+}
+
+.nav-link_m {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  padding: 8px 5px;
+  font-size: 15px;
+  font-weight: bold;
+  background: rgb(245, 245, 245);
+  &:hover {
+    color: rgb(94, 94, 94);
+    text-decoration:underline ;
+  }
+}

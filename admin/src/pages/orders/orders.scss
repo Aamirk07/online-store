@@ -1,0 +1,22 @@
+.orders {
+  display: flex;
+
+  .ordersContainer {
+    flex: 6;
+    overflow-y: scroll;
+    height: 100vh;
+    h1 {
+      padding: 20px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #999;
+      @media (max-width: 480px) {
+        margin-top: 12px;
+        margin-bottom: 0px;
+        font-size: 20px;
+        text-align: center;
+        text-decoration: underline;
+      }
+    }
+  }
+}

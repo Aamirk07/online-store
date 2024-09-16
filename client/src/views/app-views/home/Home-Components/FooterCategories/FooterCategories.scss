@@ -1,0 +1,16 @@
+.footer-responsive {
+  .footer-categories {
+    @apply flex flex-col gap-2 cursor-pointer mt-2;
+
+    li {
+      opacity: 70%;
+      transition: all 0.5s;
+    }
+    li:hover {
+      opacity: 100%;
+      transition: all 0.5s;
+    }
+  }
+
+  @apply items-center gap-1 hover:underline;
+}

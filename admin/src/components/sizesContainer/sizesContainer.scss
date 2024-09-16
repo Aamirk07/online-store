@@ -1,0 +1,26 @@
+// ColorCircles.scss
+
+.size-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.size-sub-container {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    border-color: #041bf0;
+  }
+
+  &.selected {
+    border: 2px solid #041bf0;
+  }
+}

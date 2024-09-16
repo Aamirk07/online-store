@@ -1,0 +1,55 @@
+.order {
+  display: flex;
+
+  .orderContainer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 6;
+    overflow-y: scroll;
+    height: 100vh;
+    h1 {
+      font-size: 18px;
+      color: #888;
+      @media (max-width: 480px) {
+        font-size: 16px;
+        margin-top: 10px;
+      }
+    }
+    .order-product {
+      width: 100vw;
+      display: flex;
+      gap: 30px;
+      margin: 10px 0px;
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border: 1px solid lightgray;
+        border-radius: 100%;
+      }
+      .order-product-info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .title {
+          font-size: 24px;
+          font-weight: bold;
+          color: #000;
+        }
+        .desc {
+          font-size: 20px;
+          font-weight: bold;
+          color: #444;
+        }
+        .quantity {
+          font-size: 16px;
+          font-weight: bold;
+          color: #444;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  padding: 20px;
+  @media (max-width: 480px) {
+    padding: 0px;
+  }
+
+  table {
+    width: 100%;
+    border: 1px solid #ddd;
+    font-family: sans-serif;
+    @media (max-width: 480px) {
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    thead {
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+    .smallScreen {
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+  }
+
+  th,
+  td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    @media (max-width: 480px) {
+      border: none;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      @media (max-width: 480px) {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+
+  th {
+    cursor: pointer;
+    width: 10%;
+  }
+  td {
+    text-align: center;
+    @media (max-width: 480px) {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .created {
+      color: rgb(59, 59, 255);
+      background-color: rgba(59, 59, 255, 0.267);
+    }
+    .pending {
+      color: rgb(59, 59, 255);
+      background-color: rgba(59, 59, 255, 0.267);
+    }
+    .coustom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      span {
+        padding: 2px 5px;
+        border-radius: 10%;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      .view {
+        background-color: rgba(0, 128, 0, 0.192);
+        color: green;
+      }
+      .update {
+        background-color: rgba(0, 0, 255, 0.178);
+        color: blue;
+      }
+      .delete {
+        background-color: rgba(255, 0, 0, 0.158);
+        color: red;
+      }
+    }
+  }
+
+  .sort-icon {
+    margin-left: 5px;
+  }
+
+  .sort-icon.asc {
+    transform: translateY(-3px);
+  }
+
+  .sort-icon.desc {
+    transform: translateY(3px);
+  }
+
+  tr {
+    .brief-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgb(64, 64, 255);
+      span {
+        @media (max-width: 480px) {
+          font-size: 11px;
+          font-weight: bold;
+        }
+      }
+      .index {
+        display: none;
+        @media (max-width: 480px) {
+          display: block;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+    }
+    .index {
+      display: none;
+      @media (max-width: 480px) {
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+  }
+  .view {
+    padding: 5px 10px;
+    border-radius:10px ;
+    background-color: rgba(0, 128, 0, 0.192);
+    color: green;
+  }
+}

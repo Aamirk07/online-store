@@ -1,0 +1,47 @@
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  border: solid 1px gray;
+}
+
+.cardImage{
+  margin-top: 10px;
+  object-fit: cover;
+  width: 256px;
+  height: 288px;
+}
+@media (max-width: 858px) {
+  .cardImage{
+    margin-top: 20px;
+    object-fit: cover;
+    width: 160;
+    height: 176px;
+  }
+}
+
+.custom-checkbox:checked {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/768px-White_check.svg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-color: black;
+  border: solid 1px black;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

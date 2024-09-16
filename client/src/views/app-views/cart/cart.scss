@@ -1,0 +1,10 @@
+
+.buttons-cart {
+  button {
+    @apply py-3 px-8 rounded-full bg-[#000000] cursor-pointer text-white mt-2 hover:bg-gray-500;
+
+    @media (max-width: 952px) {
+      @apply px-8 py-2 text-sm;
+    }
+  }
+}

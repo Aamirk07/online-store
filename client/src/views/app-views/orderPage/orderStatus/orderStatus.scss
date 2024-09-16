@@ -1,0 +1,25 @@
+.step-item {
+  @apply relative flex flex-row lg:flex-col justify-normal lg:justify-center items-center w-36 h-14 gap-10 lg:gap-0 lg:h-full;
+}
+
+.step-item:not(:first-child):before {
+  @apply content-[''] absolute bg-emerald-600 w-full h-[3px] right-2/4 top-1/3  -translate-y-2/4;
+  @media (max-width: 640px) {
+    @apply left-[15px] h-full w-[3px] top-0;
+  }
+}
+
+.step {
+  @apply w-8 h-8 flex z-10 relative border border-green-500  rounded-full items-center justify-center font-semibold text-xs bg-white;
+}
+.step-cancelled {
+  @apply w-8 h-8 flex z-10 border border-red-300 bg-white relative  rounded-full items-center justify-center font-semibold text-xs text-black;
+}
+
+.active .step {
+  @apply bg-emerald-300;
+}
+
+.active .current {
+  @apply font-bold text-sm;
+}
